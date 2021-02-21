@@ -20,11 +20,12 @@ function App() {
   ]);
 
   const addThought = (thought) => {
-    setThoughts(prevThoughts => ([thought, ...prevThoughts])); // array of objects!
+    setThoughts(prev => [thought, ...prev]); // array of objects!
   }
 
+  // use function with setState
   const removeThought = (thoughtIdToRemove) => {
-    setThoughts(thoughts.filter((thought) => thought.id !== thoughtIdToRemove));
+    setThoughts(prev => prev.filter((thought) => thought.id !== thoughtIdToRemove));
   }
 
   return (
