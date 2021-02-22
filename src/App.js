@@ -23,7 +23,7 @@ function App() {
     setThoughts(prev => [thought, ...prev]); // array of objects!
   }
 
-  // use function with setState
+  // use function with setThought
   const removeThought = (thoughtIdToRemove) => {
     setThoughts(prev => prev.filter((thought) => thought.id !== thoughtIdToRemove));
   }
